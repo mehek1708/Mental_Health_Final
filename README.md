@@ -28,9 +28,9 @@ The analysis is presented as part of a comprehensive communication deliverable i
 
 - `code/mental_health_code.ipynb` – Final codebook  
 - `code/basic_cleaning.ipynb` – Basic cleaning codebook 
-- `data/raw_data/access_to_care/` – Global mental health care data on healthcare services, financing, policies, and workforce, etc.  
-- `data/raw_data/disorders/` – Prevalence and death rates for mental disorders (anxiety, depression, etc.)  
-- `data/raw_data/substance_use/` – Alcohol and drug use disorder data by age, sex, and country  
+- `data/raw_data/` – Raw data files.
+- `data/basic_processed_data/` – Basic cleaning done on the raw data.
+- `data/final_data/` – Fully cleaned data (from the codebook).
 - `Mental_Health_Report.pdf` – Final blog/report (to be added)  
 - `README.md` – Project overview  
 - `images/` – Contains all the plot images from the codebook
