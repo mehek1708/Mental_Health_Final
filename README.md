@@ -34,7 +34,7 @@ The analysis is presented as part of a comprehensive communication deliverable i
 - `Mental_Health_Report.pdf` – Final blog/report (to be added)  
 - `README.md` – Project overview  
 - `images/` – Contains all the plot images from the codebook
-- `blog_post` – Blog post for the project 
+- `blog_post` – https://200103102116.wixsite.com/mysite/post/mental-health-inequality 
 
 ---
 
