@@ -1,9 +1,28 @@
 # ***Understanding Mental Health Inequality on a Global Scale***
 
-### **Introduction**
-Mental health plays a vital role in overall well-being of a person, and yet, mental healthcare remains one of the most unequally distributed health services across the world. While some countries have robust mental health policies and specialist availability, others face gaps in care, funding, and infrastructure. These disparities are often shaped by deeper structural and socioeconomic differences.
+### **Overview**
+This project explores the global burden of mental health disorders and investigates how various countries provide access to mental health policy, services, and legislation. Using a combination of unsupervised and supervised machine learning techniques, we identify hidden patterns in the data and develop predictive models to understand the factors associated with mental health access indicators.
 
-This project aims to analyze global mental health indicators using real-world, country-level datasets. We apply different machine learning techniques/models to uncover hidden patterns and build predictive models that help us better understand access to mental healthcare across nations.
+The analysis is presented as part of a comprehensive communication deliverable in the form of a well-documented Jupyter notebook hosted on GitHub. The deliverable includes clearly explained code, visualizations, and interpretations designed for both technical and general audiences.
+
+---
+
+### **Objective:**
+1. Identify underlying structure in global mental health data using dimensionality reduction and clustering.
+2. Understand the relationships between mental health burden and policy access across countries.
+3. Build supervised models to predict whether a country has mental health legislation based on disorder rates.
+4. Provide actionable insights through visual analytics and interpretability-focused methods.
+
+---
+
+## Datasets Used
+
+- **DALY Data**: Disability-Adjusted Life Years (DALYs) for multiple mental health disorders (2019–2021).
+- **Policy Access Data**: Country-wise availability of mental health policy, services, and legislation (including years of implementation).
+- **GDP Data**: Country GDP to explore correlations with access and burden.
+- All datasets were sourced from publicly available global health and economic data repositories.
+
+---
 
 ## Project Contents
 
@@ -19,44 +38,51 @@ This project aims to analyze global mental health indicators using real-world, c
 
 ---
 
-## Visual Analysis
-- PCA Projection Plot:
-   To visualize countries in 2D space using the first two principal components.
-  
-- Scree Plot:
-   To show how much variance is explained by each principal component (PCA).
+## Methods and Techniques
 
-- KMeans Cluster Scatterplot:
-  To visualize the clusters formed by KMeans on PCA-reduced data.
-  
-- Elbow Plot (K-Means)
-   To determine the optimal number of clusters by analyzing Within-Cluster Sum of Squares    (WCSS).
+### Data Preprocessing
+- Cleaned and merged multiple datasets using consistent country codes.
+- Converted year-wise access indicators into binary flags.
+- Handled missing values using `SimpleImputer` for supervised models.
+- Aggregated and reshaped disorder data into modeling format.
 
-- Dendrograms (Hierarchical Clustering):
-  To show nested clustering relationships using Ward linkage.
+### Unsupervised Learning
+- **Principal Component Analysis (PCA)**: Reduced dimensionality and visualized underlying variance structure.
+- **KMeans Clustering**: Grouped countries based on PCA-transformed data to identify similar profiles.
+- **Hierarchical Clustering (Ward linkage)**: Explored alternative groupings and compared them with KMeans results.
 
-- Decision Tree Plot
-  To visually explain how the decision tree splits data based on disorder rates to predict legislation access.
-
-- Confusion Matrix
-  To visually evaluate model performance by showing correct vs incorrect predictions.
----
-
-## Methods
-
-- Unsupervised learning
-    - PCA
-    - Hierarchial Clustering
-    - K-Means Clustering
-      
-- Supervised Learning
-    - Decision Tree
-    - Random Forest
-    - SVM
-    - Regression
-    - Logistic Regression
+### Supervised Learning
+- Target Variable: Binary indicator of whether a country has **mental health legislation**.
+- Features: Average DALY rates for 6 major disorders.
+- Models Used:
+  - Logistic Regression
+  - Random Forest
+  - Support Vector Machine (SVM)
+  - Decision Tree
+- Evaluated with confusion matrix, precision, recall, f1-score, and accuracy.
 
 ---
+
+## Visual Analytics
+
+- **Scree Plot**: Visualized explained variance from PCA.
+- **PCA Projection Scatterplots**: Colored by continent and cluster.
+- **Elbow Plot**: Helped choose optimal `k` for KMeans.
+- **Dendrogram**: Visualized hierarchical clustering structure.
+- **Model Decision Tree Plot**: Interpreted rules used for prediction.
+- **Confusion Matrices**: Evaluated model performance.
+
+---
+
+## Key Findings
+
+- PCA revealed strong separation between countries based on access and burden.
+- KMeans with `k=4` provided interpretable groupings aligned with regional and economic similarities.
+- Supervised models performed well, with Random Forest and SVM achieving the highest accuracy and F1-scores.
+- Eating Disorders and Depression were highly influential in predicting policy presence.
+
+---
+
 
 ## Summary
 
