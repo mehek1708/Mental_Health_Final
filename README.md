@@ -14,26 +14,32 @@ This project aims to analyze global mental health indicators using real-world, c
 - `data/raw_data/substance_use/` – Alcohol and drug use disorder data by age, sex, and country  
 - `Mental_Health_Report.pdf` – Final blog/report (to be added)  
 - `README.md` – Project overview  
+- `images/` – Contains all the plot images from the codebook
+- `blog_post` – Blog post for the project 
 
 ---
 
 ## Visual Analysis
+- PCA Projection Plot:
+   To visualize countries in 2D space using the first two principal components.
+  
+- Scree Plot:
+   To show how much variance is explained by each principal component (PCA).
 
-### Death Rates by Substance Use
-- **Metric:** Global average death rates per substance type  
-- **Visuals:** Radar charts grouped by age  
-- **Insight:** Highest death rates occur in middle-age and elderly groups for drug-related causes.
+- KMeans Cluster Scatterplot:
+  To visualize the clusters formed by KMeans on PCA-reduced data.
+  
+- Elbow Plot (K-Means)
+   To determine the optimal number of clusters by analyzing Within-Cluster Sum of Squares    (WCSS).
 
-### Gender-wise Drug Use Comparison
-- **Metric:** Drug use rate by gender and substance  
-- **Visuals:** Radar plots  
-- **Insight:** Male rates generally higher, but gap varies by substance.
+- Dendrograms (Hierarchical Clustering):
+  To show nested clustering relationships using Ward linkage.
 
-### Age Group Disorder Prevalence
-- **Metric:** Global average disorder rates by age  
-- **Visuals:** Line plots and bar charts  
-- **Insight:** Disorders like anxiety and depression peak in younger and mid-age groups.
+- Decision Tree Plot
+  To visually explain how the decision tree splits data based on disorder rates to predict legislation access.
 
+- Confusion Matrix
+  To visually evaluate model performance by showing correct vs incorrect predictions.
 ---
 
 ## Methods
